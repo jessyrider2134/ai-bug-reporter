@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Bug Report Generator</title>
+  <style>
+    body { font-family: Arial; text-align: center; margin-top: 50px; }
+    button { padding: 10px 20px; background: #0066ff; color: white; border: none; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>🚀 AI Bug Report Generator</h1>
+  <p>Upload a screenshot to generate a bug report</p>
+  
+  <input type="file" id="screenshot-upload" accept="image/*">
+  <button onclick="generateReport()">Generate Report</button>
+  
+  <div id="report-output" style="margin: 20px; padding: 10px; border: 1px dashed #ccc;"></div>
+
+  <script>
+    function generateReport() {
+      document.getElementById("report-output").innerText = 
+        "AI report will appear here tomorrow! 🚀";
+    }
+  </script>
+</body>
+</html>
