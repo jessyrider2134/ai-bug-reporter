@@ -3,23 +3,68 @@
 <head>
   <title>AI Bug Report Generator</title>
   <style>
-    body { font-family: Arial; text-align: center; margin-top: 50px; }
-    button { padding: 10px 20px; background: #0066ff; color: white; border: none; cursor: pointer; }
+    body { 
+      font-family: Arial, sans-serif; 
+      text-align: center; 
+      margin-top: 50px;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #0066ff;
+    }
+    #upload-container {
+      margin: 30px auto;
+      padding: 20px;
+      border: 2px dashed #ccc;
+      border-radius: 5px;
+      max-width: 500px;
+    }
+    button {
+      padding: 12px 24px;
+      background: #0066ff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 15px;
+    }
+    button:hover {
+      background: #0052cc;
+    }
+    #report-output {
+      margin: 30px auto;
+      padding: 20px;
+      border: 1px solid #eee;
+      border-radius: 5px;
+      max-width: 600px;
+      text-align: left;
+      background: #f9f9f9;
+    }
   </style>
 </head>
 <body>
   <h1>🚀 AI Bug Report Generator</h1>
-  <p>Upload a screenshot to generate a bug report</p>
+  <p>Upload a screenshot to generate a professional bug report</p>
   
-  <input type="file" id="screenshot-upload" accept="image/*">
-  <button onclick="generateReport()">Generate Report</button>
+  <div id="upload-container">
+    <input type="file" id="screenshot-upload" accept="image/*">
+    <button onclick="generateReport()">Generate Report</button>
+  </div>
   
-  <div id="report-output" style="margin: 20px; padding: 10px; border: 1px dashed #ccc;"></div>
+  <div id="report-output">
+    Your AI-generated report will appear here!
+  </div>
 
   <script>
     function generateReport() {
-      document.getElementById("report-output").innerText = 
-        "AI report will appear here tomorrow! 🚀";
+      const output = document.getElementById("report-output");
+      output.innerHTML = `<strong>🛠 Sample Report (AI coming tomorrow!)</strong><br><br>
+                         <strong>Title:</strong> Button not responding on checkout page<br>
+                         <strong>Steps:</strong> 1. Go to /cart 2. Click "Checkout" 3. Nothing happens<br>
+                         <strong>Expected:</strong> Payment modal should appear<br>
+                         <strong>Actual:</strong> No response from button<br>
+                         <strong>Device:</strong> Chrome 120, Windows 11`;
     }
   </script>
 </body>
